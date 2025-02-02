@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Sakshi Agarwala</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sakshi Agarwala</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/portfolio-pic.jpg" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hi there, and welcome to my digital space! I'm</p>
+        <h1 class="title">Sakshi Agarwala</h1>
+        <p class="section__text__p2">Welcome to My Portfolio! I’m Sakshi Agarwala, an AI and ML enthusiast passionate about building intelligent systems. Explore my projects, achievements, and experiences as I innovate at the intersection of technology and creativity! 🚀 .</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume_example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/sakshi-agarwala-09b219215/'"
+            
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/sakshiagarwala0206'"
+            
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>Hi, I'm <strong>Sakshi Agarwala</strong>, an aspiring <strong>AI and Machine Learning</strong> engineer with a passion for <strong>deep learning, automation, and software development </strong>. <br></p>
+            
+            <p>Currently pursuing my <strong>B.Tech in Electronics and Instrumentation at Ramaiah Institute of Technology</strong>, I have worked on projects involving <strong>OCR pipelines, reinforcement learning, and cloud computing</strong>.</p>
+    
+            <p>As an <strong>intern at SPIRE Lab, IISc</strong>, I specialize in:</p>
+            <ul>
+                <li>Text extraction and OCR model optimization</li>
+                <li>Bounding box detection for document processing</li>
+                <li>Deep learning techniques to enhance accuracy</li>
+            </ul>
+    
+            <p>Beyond tech, I lead <strong>Ecell Ramaiah</strong> as <strong>President</strong>, fostering entrepreneurship and innovation.</p>
+    
+            <p>I thrive on solving real-world challenges with AI and love collaborating on impactful projects. Let’s connect and innovate together! 🚀</p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <section id="Education">
+      <p class="section__text__p1">here is my</p>
+      <h2 class="title">Education</h2>
+      <div class="timeline">
+          <div class="entry entry-right">
+              <h3 class="institution-name">Ramaiah Institute of Technology</h3>
+              <p class="details">2021-2025</p>
+              <p class="degree">Electronics and Instrumentation Engineering</p>
+              <p class="details">GPA: 8.51/10</p>
+          </div>
+          <div class="entry entry-left">
+              <h3 class="institution-name">Sri Chaitanya Techno School</h3>
+              <p class="details">2018-2020</p>
+              <p class="degree">CBSE Board, PCMC</p>
+              <p class="details">XII Percentage: 91.2%</p>
+          </div>
+          <div class="entry entry-right">
+              <h3 class="institution-name">St. Xavier's School</h3>
+              <p class="details">2008-2018</p>
+              <p class="degree">ICSE Board</p>
+              <p class="details">X Percentage: 87.2%</p>
+          </div>
+      </div>
+    </section>
+
+    <section id="techstack">
+      <p class="title">This is my</p>
+      <h2>Tech Stack</h2>
+      <div class="container">
+          <div class="card">
+              <img src="./assets/code-icon.png" alt="Languages Icon">
+              <h3>Languages</h3>
+              <p>Python, C++, JavaScript</p>
+          </div>
+          <div class="card">
+              <img src="./assets/database-icon.png" alt="Database Icon">
+              <h3>Databases</h3>
+              <p>MySQL, PostgreSQL</p>
+          </div>
+          <div class="card">
+              <img src="./assets/ml-icon.png" alt="AI & ML Icon">
+              <h3>AI & Machine Learning</h3>
+              <p>TensorFlow, PyTorch, Scikit-Learn</p>
+              <p>Pandas, Numpy, Matplotlib</p>
+          </div>
+          <div class="card">
+              <img src="./assets/cloud-icon.png" alt="Cloud & DevOps Icon">
+              <h3>Cloud & DevOps</h3>
+              <p>Docker, Virtual Environments, Git, GitHub</p>
+          </div>
+          <div class="card">
+              <img src="./assets/tools-icon.png" alt="Development Tools Icon">
+              <h3>Development Tools</h3>
+              <p>Jupyter Notebook, VS Code, Anaconda, Streamlit</p>
+          </div>
+          <div class="card">
+              <img src="./assets/design-icon.png" alt="Design & Productivity Icon">
+              <h3>Design & Productivity</h3>
+              <p>Figma, Adobe Illustrator, Canva, Notion</p>
+          </div>
+      </div>
+  </section>
+
+  
+  <section id="experience" class="experience-section">
+    <p class="section__text__p1">Checkout my</p>
+    <h2 class="title">Experience</h2>
+    <div class="experience-grid">
+        <div class="experience-card">
+            <h3>SPIRE Lab-IISC</h3>
+            <p><strong>Company:</strong> SPIRE Lab, IISC</p>
+            <p><strong>Duration:</strong> Oct 2024 – Present</p>
+            <p><strong>Role:</strong> Project Intern</p>
+            <p><strong>Location:</strong> Bangalore, Karnataka</p>
+            <button class="more-link" data-modal="modal1">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+        </div>
+        
+        <div class="experience-card">
+            <h3>Ecell Ramaiah</h3>
+            <p><strong>Company:</strong> Ecell Ramaiah</p>
+            <p><strong>Duration:</strong> Sep 2022 – Present</p>
+            <p><strong>Role:</strong> Senior Core Member</p>
+            <p><strong>Location:</strong> Bangalore, Karnataka</p>
+            <button class="more-link" data-modal="modal2">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+        </div>
+        
+        <div class="experience-card">
+            <h3>Polism Solutions</h3>
+            <p><strong>Company:</strong> Polism Solutions</p>
+            <p><strong>Duration:</strong> Nov 2023 – Dec 2023</p>
+            <p><strong>Role:</strong> Cloud Computing and Security Intern</p>
+            <p><strong>Location:</strong> Bangalore, Karnataka</p>
+            <button class="more-link" data-modal="modal3">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+        </div>
+    </div>
+
+    <!-- Modal Popup Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>SPIRE Lab-IISC</h3>
+            <p class="about_company"><strong>Duration:</strong> Oct 2024 – Present</p>
+            <p class="about_company"><strong>Role:</strong> Project Intern</p>
+            <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+            <p class="descriptionn">Responsibilities and skills learned include deploying and fine-tuning Kosmos and other models <br> <br> Achieving high accuracy through pre-processing techniques and model optimization. <br><br> Developed and implemented an OCR pipeline using Python, OpenCV, and PyTesseract to automate text extraction from images, improving data processing efficiency.</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Ecell Ramaiah</h3>
+            <p class="about_company"><strong>Duration:</strong> Sep 2022 – Present</p>
+            <p class="about_company"><strong>Role:</strong> Senior Core Member</p>
+            <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+            <p class="descriptionn">Directed the Entrepreneurship Development Cell, organizing 20+ events and boosting student engagement by 35 percent. <br><br> Redesigned promotional materials, which increased event attendance by 30 percent, and led a team to enhance the overall student experience.</p>
+        </div>
+    </div>
+    
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Polism Solutions</h3>
+            <p class="about_company"><strong>Duration:</strong> Nov 2023 – Dec 2023</p>
+            <p class="about_company"><strong>Role:</strong>  Cloud Computing and Security Intern</p>
+            <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+            <p class="descriptionn">Developed innovative application features and successfully spearheaded a cloud migration project at Polism Solutions, resulting in improvements in system scalability and reliability.</p>
+        </div>
+    </div>
+</section>
+
+  
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+
+            <button class="more-link" data-modal="modal3">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+
+            <button class="more-link" data-modal="modal3">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+
+            <button class="more-link" data-modal="modal3">
+              <img src="./assets/plus.png" alt="Click here for more" />
+          </button>
+        </div>
+              <!-- Modal Popup Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>SPIRE Lab-IISC</h3>
+                <p class="about_company"><strong>Duration:</strong> Oct 2024 – Present</p>
+                <p class="about_company"><strong>Role:</strong> Project Intern</p>
+                <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+                <p class="descriptionn">Responsibilities and skills learned include deploying and fine-tuning Kosmos and other models <br> <br> Achieving high accuracy through pre-processing techniques and model optimization. <br><br> Developed and implemented an OCR pipeline using Python, OpenCV, and PyTesseract to automate text extraction from images, improving data processing efficiency.</p>
+            </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Ecell Ramaiah</h3>
+                <p class="about_company"><strong>Duration:</strong> Sep 2022 – Present</p>
+                <p class="about_company"><strong>Role:</strong> Senior Core Member</p>
+                <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+                <p class="descriptionn">Directed the Entrepreneurship Development Cell, organizing 20+ events and boosting student engagement by 35 percent. <br><br> Redesigned promotional materials, which increased event attendance by 30 percent, and led a team to enhance the overall student experience.</p>
+            </div>
+        </div>
+        
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Polism Solutions</h3>
+                <p class="about_company"><strong>Duration:</strong> Nov 2023 – Dec 2023</p>
+                <p class="about_company"><strong>Role:</strong>  Cloud Computing and Security Intern</p>
+                <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+                <p class="descriptionn">Developed innovative application features and successfully spearheaded a cloud migration project at Polism Solutions, resulting in improvements in system scalability and reliability.</p>
+            </div>
+        </div>
+
+        
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:sakshi943494@gmail.com">sakshi943494@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#169; 2025 Sakshi Agarwala. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

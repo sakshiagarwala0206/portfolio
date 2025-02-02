@@ -1,0 +1,163 @@
+@media screen and (max-width: 1400px) {
+  #desktop-nav {
+    display: flex;
+  }
+  #hamburger-nav {
+    display: none;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+
+
+
+
+/* Animation: Fade-in effect for the cards */
+.experience-card {
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+@media screen and (max-width: 1200px) {
+
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #desktop-nav {
+    display: flex;
+  }
+  #hamburger-nav {
+    display: none;
+  }
+ 
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: block;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-grid {
+    grid-template-columns: 1fr; }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .experience-section h2 {
+      font-size: 1.8rem;
+  }
+
+  .experience-card {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section h2 {
+      font-size: 1.5rem;
+  }
+
+  .experience-card h3 {
+      font-size: 1.2rem;
+  }
+
+  .experience-card p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .section__text {
+    max-width: 100%;
+    text-align: center;
+  }
+}
