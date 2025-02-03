@@ -234,7 +234,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  padding-bottom: 3%;
+  padding-bottom: 10%;
 }
 
 #socials-container {
@@ -308,6 +308,7 @@ section {
 #about {
   position: relative;
   padding: 4rem;
+  padding: 5%;
 }
 
 .about-containers {
@@ -347,8 +348,9 @@ section {
 }
 
 .section-container {
-  gap: 4rem;
+  gap: 3rem;
   height: 80%;
+  justify-content: center;
 }
 
 .text-container {
