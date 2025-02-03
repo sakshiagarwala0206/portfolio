@@ -6,6 +6,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,11 +14,20 @@ body {
   font-optical-sizing: auto;
   background-color: #121212;
   color: #e0e0e0;
-
 }
 
-html {
+section {
+
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding-bottom: 10%;
+}
+
+html,body {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden; 
 }
 
 p {
@@ -47,7 +57,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: rgb(132, 132, 132);
 
 }
@@ -200,9 +210,9 @@ section {
 }
 
 .section__text__p1 {
-  font-size: 1.25rem;
+  font-size: 1.10rem;
   text-align: center;
-  padding-bottom: 20px; 
+  padding-bottom: 5px; 
 }
 
 .section__text__p2 {
@@ -224,6 +234,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  padding-bottom: 3%;
 }
 
 #socials-container {
@@ -296,6 +307,7 @@ section {
 
 #about {
   position: relative;
+  padding: 4rem;
 }
 
 .about-containers {
@@ -340,11 +352,16 @@ section {
 }
 
 .text-container {
+  background: rgba(31, 6, 6, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(179, 179, 179, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(31, 6, 6, 0.3);
   max-width: 700px;
   margin: auto;
+  padding-top: 10px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.1); /* Light transparency */
-  border-radius: 10px;
   border-color: #e0e0e0;
   font-family: "Courier New", monospace;
   text-align: left;
@@ -355,6 +372,7 @@ section {
   font-size: 1.0em;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #d3d3d3;
 }
 
 .text-container ul {
@@ -381,7 +399,11 @@ section {
 
  /* Vertical line in the center of the timeline */
  
-
+#education {
+  position: relative;
+  gap: 3rem;
+  padding: 5%;
+}
 /* Individual education entries */
 .entry {
   position: relative;
@@ -458,8 +480,16 @@ section {
   color: #fff;
   font-size: 40px;
   margin-bottom: 20px;
-  text-align: right;
+  text-align: center;
   padding-bottom: 20px;
+}
+
+#techstack p {
+  color: #afafaf;
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: -10%;
+  margin-bottom: -10px;
 }
 
 /* Tech Stack Container */
@@ -612,12 +642,15 @@ section {
   padding-top: 20px;
   font-size: 30px;
   padding-bottom: 10px;
+  text-align: center;
  }
  .modal-content .about_company {
   font-size: 12px;
+  text-align: center;
  }
  .modal-content .descriptionn {
   padding: 5%;
+  text-align: center;
  }
 
 .close-btn {
@@ -676,13 +709,13 @@ section {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(8, 8, 8);
+  background: rgb(21, 21, 21);
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 50%;
+  height: 50%;
 }
 
 .project-title {
@@ -695,6 +728,73 @@ section {
   border-color: rgb(163, 163, 163);
 }
 
+/* Modal (Popup) Styling */
+.modal-project {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
+}
+
+.modal-content-project {
+  background-color: #00272a;
+  color: white;
+  margin: auto; /* Center horizontally */
+  position:absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center properly */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 6px 15px rgba(173, 173, 173, 0.15);
+
+}
+ .modal-content-project h3{
+  padding-top: 20px;
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+
+ }
+ .modal-content-project .about_company {
+  font-size: 12px;
+  text-align: center;
+ }
+ .modal-content-project .descriptionn {
+  padding: 5%;
+  text-align: center;
+ }
+
+ .icon-movie {
+  display: block;
+  margin: 20px auto; /* Centers the icon */
+  width: 40px; /* Resize the icon */
+  cursor: pointer;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* CONTACT */
 
 #contact {
@@ -711,8 +811,8 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+  margin: 3rem auto;
+  padding: 1rem;
 }
 
 .contact-info-container {
@@ -724,7 +824,8 @@ section {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 18px;
+  color: #dadada;
 }
 
 .contact-icon {

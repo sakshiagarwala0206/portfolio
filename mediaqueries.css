@@ -41,7 +41,7 @@
  
   #profile,
   .section-container {
-    display: block;
+    display: grid;
   }
   .arrow {
     display: block;
