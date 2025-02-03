@@ -234,7 +234,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 #socials-container {
@@ -411,6 +411,7 @@ section {
   position: relative;
   gap: 3rem;
   padding: 5%;
+  margin-top: 16%;
 }
 /* Individual education entries */
 .entry {
@@ -481,6 +482,7 @@ section {
   width: 100%;
   padding: 100px;
   margin: 0 auto;
+  margin-top: 5%;
 }
 
 
@@ -490,15 +492,18 @@ section {
   margin-bottom: 20px;
   text-align: center;
   padding-bottom: 20px;
+
 }
 
 #techstack p {
   color: #afafaf;
-  font-size: 13px;
+  font-size: 18px;
   text-align: center;
-  padding-bottom: -10%;
-  margin-bottom: -10px;
+  padding-bottom: -140%;
+  margin-bottom: -15px;
 }
+
+
 
 /* Tech Stack Container */
 .container {
@@ -525,7 +530,9 @@ section {
 
 .card p {
   color: #d3d3d3;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
+  margin-bottom: 10%;
+  padding-bottom: 10px;
 }
 
 .card h3 {
@@ -558,15 +565,14 @@ section {
 }
 
 .experience-section {
-  padding: 3rem 1.5rem;
+  padding: 4rem 1rem;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .experience-section h2 {
   font-size: 2.5rem;
   color: #d8d8d8;
-  margin-bottom: 2rem;
   font-weight: bold;
 }
 
@@ -713,6 +719,7 @@ section {
 
 #projects {
   position: relative;
+  margin-top: 12%;
 }
 
 .color-container {
@@ -810,6 +817,7 @@ section {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  margin-top: 12%;
 }
 
 .contact-info-upper-container {
