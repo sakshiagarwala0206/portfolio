@@ -378,6 +378,19 @@
     width: 90%;  /* Reduce width for smaller screen */
     margin: 10px auto;  /* Center the card */
   }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .article-cont {
+      max-width: 90%;
+  }
+  .title {
+      font-size: 1.8rem;
+  }
+  .article-title {
+      font-size: 1.3rem;
+  }
+}
 }
 
 
