@@ -4,241 +4,287 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="description" content="Sakshi Agarwala - AI and Machine Learning Engineer. Portfolio showcasing projects, experience, and expertise in deep learning, automation, and software development." />
+    <meta name="keywords" content="Sakshi Agarwala, AI Engineer, Machine Learning, Deep Learning, Portfolio, Software Developer" />
+    <meta name="author" content="Sakshi Agarwala" />
+    <title>Sakshi Agarwala - AI & ML Engineer | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Sakshi Agarwala</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#Education">Education</a></li>
-          <li><a href="#techstack">Techstack</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sakshi Agarwala</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <header>
+      <nav id="desktop-nav" aria-label="Main navigation">
+        <div class="logo" aria-label="Sakshi Agarwala">
+          <a href="index.html">Sakshi Agarwala</a>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#Education" onclick="toggleMenu()">Education</a></li>
-          <li><a href="#techstack" onclick="toggleMenu()">Techstack</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div>
+          <ul class="nav-links" role="list">
+            <li role="listitem"><a href="#about" aria-label="Navigate to About section">About</a></li>
+            <li role="listitem"><a href="#experience" aria-label="Navigate to Experience section">Experience</a></li>
+            <li role="listitem"><a href="#projects" aria-label="Navigate to Projects section">Projects</a></li>
+            <li role="listitem" class="dropdown">
+              <a href="#" class="dropdown-toggle" aria-label="More sections" aria-expanded="false">More <span class="dropdown-arrow">▼</span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li role="menuitem"><a href="#Education">Education</a></li>
+                <li role="menuitem"><a href="#techstack">Techstack</a></li>
+                <li role="menuitem"><a href="#achievements">Achievements</a></li>
+                <li role="menuitem"><a href="#publications">Publications</a></li>
+                <li role="menuitem"><a href="blogs.html">Blogs</a></li>
+              </ul>
+            </li>
+            <li role="listitem"><a href="#contact" aria-label="Navigate to Contact section">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
+      </nav>
+      <nav id="hamburger-nav" aria-label="Mobile navigation">
+        <div class="logo" aria-label="Sakshi Agarwala">
+          <a href="index.html">Sakshi Agarwala</a>
+        </div>
+        <div class="hamburger-menu">
+          <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="menu-links" role="menu">
+            <li role="menuitem"><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li role="menuitem"><a href="#Education" onclick="toggleMenu()">Education</a></li>
+            <li role="menuitem"><a href="#techstack" onclick="toggleMenu()">Techstack</a></li>
+            <li role="menuitem"><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li role="menuitem"><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li role="menuitem"><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
+            <li role="menuitem"><a href="#publications" onclick="toggleMenu()">Publications</a></li>
+            <li role="menuitem"><a href="blogs.html" onclick="toggleMenu()">Blogs</a></li>
+            <li role="menuitem"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+    <section id="profile" aria-labelledby="profile-title">
       <div class="section__pic-container">
-        <img src="./assets/portfolio-pic.jpg" alt="John Doe profile picture" />
+        <img src="./assets/portfolio-pic.jpg" alt="Sakshi Agarwala profile picture" loading="lazy" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hi there, and welcome to my digital space! I'm</p>
-        <h1 class="title">Sakshi Agarwala</h1>
-        <p class="section__text__p2">Welcome to My Portfolio! I’m an AI and ML enthusiast passionate about building intelligent systems. Explore my projects, achievements, and experiences as I innovate at the intersection of technology and creativity! 🚀 .</p>
+        <h1 class="title" id="profile-title">Sakshi Agarwala</h1>
+        <p class="section__text__p2">Research Associate at SPIRE Lab, IISc | B.Tech Graduate in Electronics and Instrumentation Engineering | AI & ML Engineer specializing in speech processing and document understanding. Passionate about building intelligent systems that solve real-world problems. Explore my projects, achievements, and experiences! 🚀</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/resume_example.pdf')"
+            aria-label="Download resume PDF"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='./#contact'" aria-label="Go to contact section">
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/sakshi-agarwala-09b219215/'"
-            
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/sakshiagarwala0206'"
-            
-          />
+        <div id="socials-container" role="list">
+          <a
+            href="https://www.linkedin.com/in/sakshi-agarwala-09b219215/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit LinkedIn profile"
+            role="listitem"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon"
+            />
+          </a>
+          <a
+            href="https://github.com/sakshiagarwala0206"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit GitHub profile"
+            role="listitem"
+          >
+            <img
+              src="./assets/github.png"
+              alt="GitHub icon"
+              class="icon"
+            />
+          </a>
         </div>
       </div>
     </section>
-    <section id="about">
+    <section id="about" aria-labelledby="about-title">
       <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <h1 class="title" id="about-title">About Me</h1>
       <div class="section-container">
         <div class="about-details-container">
           <div class="text-container">
-            <p>Hi, I'm <strong>Sakshi Agarwala</strong>, an aspiring AI and Machine Learning engineer with a passion for deep learning, automation, and software development . <br></p>
+            <p>Hi, I'm <strong>Sakshi Agarwala</strong>, a Research Associate specializing in speech processing and document understanding systems. I recently completed my B.Tech in Electronics and Instrumentation Engineering from Ramaiah Institute of Technology with a CGPA of 8.6, combining my engineering background with expertise in AI, machine learning, and audio engineering.</p>
             
-            <p>Currently pursuing my B.Tech in Electronics and Instrumentation at Ramaiah Institute of Technology, I have worked on projects involving <strong>Machine Learning, reinforcement learning, and cloud computing</strong>.</p>
+            <p>As a <strong>Research Associate at SPIRE Lab, IISc</strong>, I develop speech segmentation, detection, and transcription pipelines using VAD and Whisper ASR. I automate audio clipping and quantitative analysis for dataset augmentation, build multilingual language detection and analytics with similarity metrics on large audio corpora, and manage end-to-end audio annotation workflows. I also address ASR/transcription quality through region-based review and data analysis.</p>
     
-            <p>As an intern at SPIRE Lab, IISc, I specialize in:</p>
-            <ul>
-                <li>Text extraction and OCR model optimization</li>
-                <li>Bounding box detection for document processing</li>
-                <li>Deep learning techniques to enhance accuracy</li>
-            </ul>
+            <p>Previously, as a <strong>Research Intern</strong>, I deployed and fine-tuned Kosmos, YOLO, and Surya OCR models for document understanding. I built OCR pipelines using Python, OpenCV, and PyTesseract, evaluated model accuracy using WER and CER metrics via jiwer, and contributed to LLM pipelines with COMET score evaluations.</p>
     
-            <p>Beyond tech, I lead Ecell Ramaiah as senior-core member, fostering entrepreneurship and innovation.</p>
+            <p>My technical expertise spans <strong>Machine Learning, Reinforcement Learning, Computer Vision, Speech Processing, and Cloud Computing</strong>. I've worked on diverse projects ranging from assistive walker balancing systems using deep RL to movie recommendation systems and IoT-based smart monitoring solutions.</p>
     
-            <p>I thrive on solving real-world challenges with AI and love collaborating on impactful projects. Let’s connect and innovate together! 🚀</p>
+            <p>Beyond technical work, I serve as <strong>President of Ecell Ramaiah</strong>, where I've led initiatives that increased student engagement by 35% and organized 20+ entrepreneurship events. I've also secured second place in IISc Bengaluru's Urban Vision Hackathon and have research publications in control systems and reinforcement learning.</p>
+    
+            <p>I'm passionate about solving real-world challenges with AI and love collaborating on impactful projects. Let's connect and innovate together! 🚀</p>
           </div>
         </div>
       </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      /> -->
     </section>
 
-    <section id="Education">
+    <section id="Education" aria-labelledby="education-title">
       <p class="section__text__p1">here is my</p>
-      <h2 class="title">Education</h2>
-      <div class="timeline">
-          <div class="entry entry-right">
+      <h2 class="title" id="education-title">Education</h2>
+      <div class="timeline" role="list">
+          <article class="entry entry-right" role="listitem">
               <h3 class="institution-name">Ramaiah Institute of Technology</h3>
-              <p class="details">2021-2025</p>
-              <p class="degree">Electronics and Instrumentation Engineering</p>
-              <p class="details">GPA: 8.51/10</p>
-          </div>
-          <div class="entry entry-left">
+              <p class="details">Dec 2021 - Jul 2025</p>
+              <p class="degree">B.Tech in Electronics and Instrumentation Engineering</p>
+              <p class="details">CGPA: 8.6/10</p>
+          </article>
+          <article class="entry entry-left" role="listitem">
               <h3 class="institution-name">Sri Chaitanya Techno School</h3>
               <p class="details">2018-2020</p>
               <p class="degree">CBSE Board, PCMC</p>
               <p class="details">XII Percentage: 91.2%</p>
-          </div>
-          <div class="entry entry-right">
+          </article>
+          <article class="entry entry-right" role="listitem">
               <h3 class="institution-name">St. Xavier's School</h3>
               <p class="details">2008-2018</p>
               <p class="degree">ICSE Board</p>
               <p class="details">X Percentage: 87.2%</p>
-          </div>
+          </article>
       </div>
     </section>
 
-    <section id="techstack">
+    <section id="techstack" aria-labelledby="techstack-title">
       <p class="title">This is my</p>
-      <h2>Tech Stack</h2>
-      <div class="container">
-          <div class="card">
-              <img src="./assets/code-icon.png" alt="Languages Icon">
+      <h2 id="techstack-title">Tech Stack</h2>
+      <div class="container" role="list">
+          <article class="card" role="listitem">
+              <img src="./assets/code-icon.png" alt="Languages Icon" loading="lazy">
               <h3>Languages</h3>
               <p>Python, C++, JavaScript</p>
-          </div>
-          <div class="card">
-              <img src="./assets/database-icon.png" alt="Database Icon">
+          </article>
+          <article class="card" role="listitem">
+              <img src="./assets/database-icon.png" alt="Database Icon" loading="lazy">
               <h3>Databases</h3>
               <p>MySQL, PostgreSQL</p>
-          </div>
-          <div class="card">
-              <img src="./assets/ml-icon.png" alt="AI & ML Icon">
+          </article>
+          <article class="card" role="listitem">
+              <img src="./assets/ml-icon.png" alt="AI & ML Icon" loading="lazy">
               <h3>AI & Machine Learning</h3>
               <p>TensorFlow, PyTorch, Pandas, Numpy, Matplotlib, Scikit</p>
-              
-          </div>
-          <div class="card">
-              <img src="./assets/cloud-icon.png" alt="Cloud & DevOps Icon">
+          </article>
+          <article class="card" role="listitem">
+              <img src="./assets/cloud-icon.png" alt="Cloud & DevOps Icon" loading="lazy">
               <h3>Cloud & DevOps</h3>
               <p>Docker, Virtual Environments, Git, GitHub</p>
-          </div>
-          <div class="card">
-              <img src="./assets/tools-icon.png" alt="Development Tools Icon">
+          </article>
+          <article class="card" role="listitem">
+              <img src="./assets/tools-icon.png" alt="Development Tools Icon" loading="lazy">
               <h3>Development Tools</h3>
               <p>Jupyter Notebook, VS Code, Anaconda, Streamlit</p>
-          </div>
-          <div class="card">
-              <img src="./assets/design-icon.png" alt="Design & Productivity Icon">
+          </article>
+          <article class="card" role="listitem">
+              <img src="./assets/design-icon.png" alt="Design & Productivity Icon" loading="lazy">
               <h3>Design & Productivity</h3>
               <p>Figma, Adobe Illustrator, Canva, Notion</p>
-          </div>
+          </article>
       </div>
   </section>
 
   
-  <section id="experience" class="experience-section">
+  <section id="experience" class="experience-section" aria-labelledby="experience-title">
     <p class="section__text__p1">Checkout my</p>
-    <h2 class="title">Experience</h2>
-    <div class="experience-grid">
-        <div class="experience-card">
+    <h2 class="title" id="experience-title">Experience</h2>
+    <div class="experience-grid" role="list">
+        <article class="experience-card" role="listitem">
             <h3>SPIRE Lab-IISC</h3>
             <p><strong>Company:</strong> SPIRE Lab, IISC</p>
-            <p><strong>Duration:</strong> Oct 2024 – Present</p>
-            <p><strong>Role:</strong> Project Intern</p>
+            <p><strong>Duration:</strong> July 2025 – Present</p>
+            <p><strong>Role:</strong> Research Associate</p>
             <p><strong>Location:</strong> Bangalore, Karnataka</p>
-            <button class="more-link" data-modal="modal1">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal="modal1" aria-label="View more details about SPIRE Lab-IISC Research Associate experience">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
-        </div>
+        </article>
         
-        <div class="experience-card">
+        <article class="experience-card" role="listitem">
+            <h3>SPIRE Lab-IISC</h3>
+            <p><strong>Company:</strong> SPIRE Lab, IISC</p>
+            <p><strong>Duration:</strong> Oct 2024 – June 2025</p>
+            <p><strong>Role:</strong> Research Intern</p>
+            <p><strong>Location:</strong> Bangalore, Karnataka</p>
+            <button class="more-link" data-modal="modal1-intern" aria-label="View more details about SPIRE Lab-IISC Research Intern experience">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
+          </button>
+        </article>
+        
+        <article class="experience-card" role="listitem">
             <h3>Ecell Ramaiah</h3>
             <p><strong>Company:</strong> Ecell Ramaiah</p>
             <p><strong>Duration:</strong> Sep 2022 – Present</p>
-            <p><strong>Role:</strong> Senior Core Member</p>
+            <p><strong>Role:</strong> President</p>
             <p><strong>Location:</strong> Bangalore, Karnataka</p>
-            <button class="more-link" data-modal="modal2">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal="modal2" aria-label="View more details about Ecell Ramaiah experience">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
-        </div>
+        </article>
         
-        <div class="experience-card">
+        <article class="experience-card" role="listitem">
             <h3>Polism Solutions</h3>
             <p><strong>Company:</strong> Polism Solutions</p>
             <p><strong>Duration:</strong> Nov 2023 – Dec 2023</p>
             <p><strong>Role:</strong> Cloud Computing and Security Intern</p>
             <p><strong>Location:</strong> Bangalore, Karnataka</p>
-            <button class="more-link" data-modal="modal3">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal="modal3" aria-label="View more details about Polism Solutions experience">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
-        </div>
+        </article>
     </div>
 
     <!-- Modal Popup Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal" role="dialog" aria-labelledby="modal1-title" aria-modal="true">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>SPIRE Lab-IISC</h3>
-            <p class="about_company"><strong>Duration:</strong> Oct 2024 – Present</p>
-            <p class="about_company"><strong>Role:</strong> Project Intern</p>
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h3 id="modal1-title">SPIRE Lab-IISC - Research Associate</h3>
+            <p class="about_company"><strong>Duration:</strong> July 2025 – Present</p>
+            <p class="about_company"><strong>Role:</strong> Research Associate</p>
             <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
-            <p class="descriptionn">Responsibilities and skills learned include deploying and fine-tuning Kosmos and other models <br> <br> Achieving high accuracy through pre-processing techniques and model optimization. <br><br> Developed and implemented an OCR pipeline using Python, OpenCV, and PyTesseract to automate text extraction from images, improving data processing efficiency.</p>
+            <p class="descriptionn">Developed speech segmentation, detection, and transcription pipelines using VAD and Whisper ASR. Automated audio clipping and quantitative analysis for dataset augmentation. Built multilingual language detection and analytics with similarity metrics on large audio corpora. Managed end-to-end audio annotation, output, and experiment tracking workflows. Addressed ASR/transcription quality and alignment through region-based review and data analysis.</p>
         </div>
     </div>
     
-    <div id="modal2" class="modal">
+    <div id="modal1-intern" class="modal" role="dialog" aria-labelledby="modal1-intern-title" aria-modal="true">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Ecell Ramaiah</h3>
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h3 id="modal1-intern-title">SPIRE Lab-IISC - Research Intern</h3>
+            <p class="about_company"><strong>Duration:</strong> Oct 2024 – June 2025</p>
+            <p class="about_company"><strong>Role:</strong> Research Intern</p>
+            <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
+            <p class="descriptionn">Deployed and fine-tuned Kosmos, YOLO, and Surya OCR models for document understanding, achieving high accuracy through pre-processing techniques and model optimization. Developed and implemented an OCR pipeline using Python, OpenCV, and PyTesseract to automate text extraction from images, improving data processing efficiency. Evaluated model accuracy using Word Error Rate (WER) and Character Error Rate (CER) with jiwer. Worked on bounding box detection and explored models for structured text extraction. Contributed to LLM pipelines and calculated COMET scores for evaluation.</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal" role="dialog" aria-labelledby="modal2-title" aria-modal="true">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h3 id="modal2-title">Ecell Ramaiah</h3>
             <p class="about_company"><strong>Duration:</strong> Sep 2022 – Present</p>
-            <p class="about_company"><strong>Role:</strong> Senior Core Member</p>
+            <p class="about_company"><strong>Role:</strong> President</p>
             <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
-            <p class="descriptionn">Directed the Entrepreneurship Development Cell, organizing 20+ events and boosting student engagement by 35 percent. <br><br> Redesigned promotional materials, which increased event attendance by 30 percent, and led a team to enhance the overall student experience.</p>
+            <p class="descriptionn">Directed the Entrepreneurship Development Cell, organizing 20+ events and boosting student engagement by 35 percent. Redesigned promotional materials, which increased event attendance by 30 percent, and led a team to enhance the overall student experience.</p>
         </div>
     </div>
     
-    <div id="modal3" class="modal">
+    <div id="modal3" class="modal" role="dialog" aria-labelledby="modal3-title" aria-modal="true">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Polism Solutions</h3>
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h3 id="modal3-title">Polism Solutions</h3>
             <p class="about_company"><strong>Duration:</strong> Nov 2023 – Dec 2023</p>
-            <p class="about_company"><strong>Role:</strong>  Cloud Computing and Security Intern</p>
+            <p class="about_company"><strong>Role:</strong> Cloud Computing and Security Intern</p>
             <p class="about_company"><strong>Location:</strong> Bangalore, Karnataka</p>
             <p class="descriptionn">Developed innovative application features and successfully spearheaded a cloud migration project at Polism Solutions, resulting in improvements in system scalability and reliability.</p>
         </div>
@@ -246,191 +292,208 @@
 </section>
 
   
-    <section id="projects">
+    <section id="projects" aria-labelledby="projects-title">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title" id="projects-title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
+        <div class="about-containers" role="list">
+          <article class="details-container color-container" role="listitem">
             <div class="article-container">
               <img
-                src="./assets/wired-outline-1331-repository-hover-pinch.gif"
+                src="./assets/inverted-static.png"
                 anim="./assets/wired-outline-1331-repository-hover-pinch.gif"
                 stat="./assets/inverted-static.png"
-                alt="Project 1"
+                alt="Inverted Pendulum Balancing System project preview"
                 class="project-img"
+                loading="lazy"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Inverted Pendulum Balancing System</h2>
+            <h2 class="experience-sub-title project-title">Assistive Walker Balancing System</h2>
 
-            <button class="more-link" data-modal="modal1-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal-project="modal1-project" aria-label="View more details about Inverted Pendulum Balancing System project">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
-            <!-- <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div> -->
-          </div>
-          <div class="details-container color-container">
+          </article>
+          <article class="details-container color-container" role="listitem">
             <div class="article-container">
               <img
-                src="./assets/wired-outline-62-film-hover-play.gif"
+                src="./assets/movie-static.png"
                 anim="./assets/wired-outline-62-film-hover-play.gif"
                 stat="./assets/movie-static.png"
-                alt="Project 1"
+                alt="Movie recommender system project preview"
                 class="project-img"
+                loading="lazy"
               />
             </div>
             <h2 class="experience-sub-title project-title">Movie recommender system</h2>
 
-            <button class="more-link" data-modal="modal2-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal-project="modal2-project" aria-label="View more details about Movie recommender system project">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
-          </div>
-          <div class="details-container color-container">
+          </article>
+          <article class="details-container color-container" role="listitem">
             <div class="article-container">
               <img
-                src="./assets/wired-outline-1827-growing-plant-hover-pinch.gif"
+                src="./assets/plant-static.png"
                 anim="./assets/wired-outline-1827-growing-plant-hover-pinch.gif"
                 stat="./assets/plant-static.png"
-                alt="Project 1"
+                alt="Smart Plant Monitoring System project preview"
                 class="project-img"
+                loading="lazy"
               />
             </div>
             <h2 class="experience-sub-title project-title">Smart Plant Monitoring System</h2>
 
-            <button class="more-link" data-modal="modal3-project">
-              <img src="./assets/plus.png" alt="Click here for more" />
+            <button class="more-link" data-modal-project="modal3-project" aria-label="View more details about Smart Plant Monitoring System project">
+              <img src="./assets/plus.png" alt="" aria-hidden="true" />
           </button>
+        </article>
         </div>
               <!-- Modal Popup Structure -->
-          <div id="modal1-project" class="modal-project">
+          <div id="modal1-project" class="modal-project" role="dialog" aria-labelledby="modal1-project-title" aria-modal="true">
             <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>Inverted Pendulum Balancing System</h3>
-                <p class="about_company"><strong>Timeline</strong> November 2024 - Present</p>
-                <p class="about_company"><strong>Techstack</strong> Python, Reinforcement Learning, PID Control, DL</p>
-                <p class="descriptionn">Developing and comparing reinforcement learning (RL) and PID control algorithms to balance an inverted pendulum. The
-                  project involves implementing and testing PID control for stability, while exploring deep reinforcement learning to improve
-                  performance. The system is built using Python and RL frameworks like TensorFlow and OpenAI Gym, with a focus on
-                  evaluating balance stability and response time.</p>
-                  <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon-movie"
-              onclick="location.href='https://github.com/sakshiagarwala0206/majorproject'"
-              
-              
-            />
+                <button class="close-btn" aria-label="Close modal">&times;</button>
+                <h3 id="modal1-project-title">Assistive Walker Balancing System</h3>
+                <p class="about_company"><strong>Timeline:</strong> November 2024 - June 2025</p>
+                <p class="about_company"><strong>Techstack:</strong> Python, PyBullet, SB3, URDF</p>
+                <p class="descriptionn">Engineered custom URDF models for assistive walker and CartPole systems with realistic physics simulation using PyBullet, implementing differential-drive mechanics, IMU sensors, and joint dynamics for comprehensive robotic control research. Developed and benchmarked algorithms using Stable Baselines3 framework, achieving superior performance with deep RL methods over classical control in continuous action spaces. Created custom Gymnasium-compatible environments with observation spaces including pole angle/velocity, base pose, wheel velocities, and IMU data, enabling systematic evaluation of balance stability and response time metrics. Implemented comparative analysis framework measuring episode length, cumulative reward, and stability metrics, demonstrating algorithms' enhanced sample efficiency and robustness in continuous control tasks.</p>
+                  <a
+              href="https://github.com/sakshiagarwala0206/majorproject"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Inverted Pendulum Balancing System project on GitHub"
+            >
+              <img
+                src="./assets/github.png"
+                alt="GitHub icon"
+                class="icon-movie"
+              />
+            </a>
             </div>
         </div>
         
-        <div id="modal2-project" class="modal-project">
+        <div id="modal2-project" class="modal-project" role="dialog" aria-labelledby="modal2-project-title" aria-modal="true">
             <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>Movie recommender system</h3>
-                <p class="about_company"><strong>Timeline: </strong> August 2024</p>
-                <p class="about_company"><strong>Techstack:</strong>Python,Scikit, Pycharm, Streamlit— View Source Coder</p>
-                <p class="descriptionn">movie recommender system in which the data was fetched using a kaggle dataset and then vectorization was applied to
+                <button class="close-btn" aria-label="Close modal">&times;</button>
+                <h3 id="modal2-project-title">Movie recommender system</h3>
+                <p class="about_company"><strong>Timeline:</strong> August 2024</p>
+                <p class="about_company"><strong>Techstack:</strong> Python, Scikit, Pycharm, Streamlit</p>
+                <p class="descriptionn">Movie recommender system in which the data was fetched using a kaggle dataset and then vectorization was applied to
                   obtain a algorithm. The algorithm was then deployed using pycharm and streamlit.</p>
-                    <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon-movie"
-              onclick="location.href='https://github.com/sakshiagarwala0206/movie_recommender_system_project'"
-              
-              
-            />
+                    <a
+              href="https://github.com/sakshiagarwala0206/movie_recommender_system_project"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Movie recommender system project on GitHub"
+            >
+              <img
+                src="./assets/github.png"
+                alt="GitHub icon"
+                class="icon-movie"
+              />
+            </a>
             </div>
         </div>
         
-        <div id="modal3-project" class="modal-project">
+        <div id="modal3-project" class="modal-project" role="dialog" aria-labelledby="modal3-project-title" aria-modal="true">
             <div class="modal-content-project">
-                <span class="close-btn">&times;</span>
-                <h3>Smart Plant Monitoring System</h3>
+                <button class="close-btn" aria-label="Close modal">&times;</button>
+                <h3 id="modal3-project-title">Smart Plant Monitoring System</h3>
                 <p class="about_company"><strong>Duration:</strong> May-June 2024</p>
-                <p class="about_company"><strong>Techstack:</strong>  Arduino,C++</p>
+                <p class="about_company"><strong>Techstack:</strong> Arduino, C++</p>
                 <p class="descriptionn">Built an automated system using various sensors, a solar panel, and a rainwater harvesting system.</p>
             </div>
         </div>
 
         
       </div>
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      /> -->
     </section>
 
-    <section class="blog-section">
+    <section class="blog-section" aria-labelledby="blog-title">
       <p class="section__text__p1">Checkout my</p>
-      <h1 class="title">Medium Articles</h1>
+      <h1 class="title" id="blog-title">Medium Articles</h1>
       <!-- Blog Card 1 -->
-      <a href="https://medium.com/@sakshi943494/natural-language-processing-bridging-linguistics-computer-science-and-ai-47f33ab2999d" class="blog-card" target="_blank" rel="noopener noreferrer">
-          <h2 class="blog-title">Natural Language Processing: Bridging Linguistics, Computer Science, and AI</h2>
-          <p class="blog-subtitle">Natural Language Processing (NLP) is a fascinating subfield...</p>
-          <div class="blog-meta">
-              <span class="meta-date">Oct 7, 2024</span>
-              <!-- <span class="meta-info">1K views</span>
-              <span class="meta-comments">14 comments</span> -->
-          </div>
-      </a>
+      <article>
+        <a href="https://medium.com/@sakshi943494/natural-language-processing-bridging-linguistics-computer-science-and-ai-47f33ab2999d" class="blog-card" target="_blank" rel="noopener noreferrer">
+            <h2 class="blog-title">Natural Language Processing: Bridging Linguistics, Computer Science, and AI</h2>
+            <p class="blog-subtitle">Natural Language Processing (NLP) is a fascinating subfield...</p>
+            <div class="blog-meta">
+                <time class="meta-date" datetime="2024-10-07">Oct 7, 2024</time>
+            </div>
+        </a>
+      </article>
   
       <!-- Blog Card 2 -->
-      <a href="https://medium.com/@sakshi943494/understanding-immediate-reinforcement-learning-rl-problems-8c54f76c532f" class="blog-card" target="_blank" rel="noopener noreferrer">
-          <h2 class="blog-title">Understanding Immediate Reinforcement Learning (RL) Problems</h2>
-          <p class="blog-subtitle">Reinforcement Learning (RL) is a branch of machine learning where...</p>
-          <div class="blog-meta">
-              <span class="meta-date">Feb 4, 2025</span>
-              <!-- <span class="meta-info">800 views</span>
-              <span class="meta-comments">10 comments</span> -->
-          </div>
-      </a>
+      <article>
+        <a href="https://medium.com/@sakshi943494/understanding-immediate-reinforcement-learning-rl-problems-8c54f76c532f" class="blog-card" target="_blank" rel="noopener noreferrer">
+            <h2 class="blog-title">Understanding Immediate Reinforcement Learning (RL) Problems</h2>
+            <p class="blog-subtitle">Reinforcement Learning (RL) is a branch of machine learning where...</p>
+            <div class="blog-meta">
+                <time class="meta-date" datetime="2025-02-04">Feb 4, 2025</time>
+            </div>
+        </a>
+      </article>
 
-      <a href="blogs.html" class="load-more-btn">Click for more</a>
+      <a href="blogs.html" class="load-more-btn" aria-label="View more blog articles">Click for more</a>
   </section>
   
-  
+    <section id="achievements" aria-labelledby="achievements-title">
+      <p class="section__text__p1">Checkout my</p>
+      <h1 class="title" id="achievements-title">Achievements</h1>
+      <div class="text-container">
+        <ul>
+          <li>Secured <strong>second place</strong> in <strong>IISc Bengaluru's Urban Vision Hackathon</strong> by developing an AI pipeline for vehicle detection in Indian traffic. Led data cleaning (27K+ images), rare-class augmentation, and model optimization, achieving top mAP scores. Contributed to India's largest open-source traffic dataset initiative supported by MoE, AIRAWAT, and Bangalore Traffic Police.</li>
+          <li>Selected for Centuriton, a national-level hackathon conducted by RIT.</li>
+          <li>Achieved top 10 placement in Whackiest Hackathon, an intra-college event.</li>
+          <li>Selected for Smart India Hackathon, a prestigious national competition.</li>
+          <li>Secured <strong>First Prize</strong> in Entrepreneurship Development Cell's <strong>Design Competition</strong> among <strong>30</strong> teams.</li>
+          <li>Secured <strong>Second Prize</strong> in IEEE's <strong>UI/UX Competition</strong> among <strong>35</strong> teams.</li>
+        </ul>
+      </div>
+    </section>
 
-    <section id="contact">
+    <section id="publications" aria-labelledby="publications-title">
+      <p class="section__text__p1">Checkout my</p>
+      <h1 class="title" id="publications-title">Research Publications</h1>
+      <div class="text-container">
+        <ul>
+          <li><strong>Control Strategy Comparison for CartPole Systems Using Proportional-Integral-Derivative and Reinforcement Learning Strategies</strong> | <em>ICISC 2025</em> | Authors: Elavaar Kuzhali S, <strong>Sakshi Agarwala</strong>, Vaishnavi Karanji, Tamanna Goel | <a href="https://ieeexplore.ieee.org/document/11188171" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); text-decoration: underline;">IEEE Xplore</a> (Presented and Online)</li>
+          <li><strong>Comparative Analysis of PID, RL, and DRL for Balancing a URDF-Modeled Assistive Walker with Inverted Pendulum Dynamics</strong> | <em>ICCCNT 2025</em> | Authors: Elavaar Kuzhali S, <strong>Sakshi Agarwala</strong>, Vaishnavi Karanji, Tamanna Goel | (Presented, not yet online)</li>
+        </ul>
+      </div>
+    </section>
+
+    </main>
+    <section id="contact" aria-labelledby="contact-title">
       <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <h1 class="title" id="contact-title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
             src="./assets/email.png"
-            alt="Email icon"
+            alt=""
             class="icon contact-icon email-icon"
+            aria-hidden="true"
           />
-          <p><a href="mailto:sakshi943494@gmail.com">sakshi943494@gmail.com</a></p>
+          <p><a href="mailto:sakshi943494@gmail.com" aria-label="Send email to sakshi943494@gmail.com">sakshi943494@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
             src="./assets/linkedin.png"
-            alt="LinkedIn icon"
+            alt=""
             class="icon contact-icon"
+            aria-hidden="true"
           />
-          <p><a href="https://www.linkedin.com/in/sakshi-agarwala-09b219215/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/sakshi-agarwala-09b219215/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a></p>
         </div>
         <div class="contact-info-container">
           <img
             src="./assets/add-contact.png"
-            alt="Phone icon"
+            alt=""
             class="icon contact-icon"
+            aria-hidden="true"
           />
-          <p><a href="tel:+917602707177">76027 07177</a></p>
+          <p><a href="tel:+917602707177" aria-label="Call 76027 07177">76027 07177</a></p>
         </div>
       </div>
     </section>

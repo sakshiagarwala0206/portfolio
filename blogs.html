@@ -1,48 +1,94 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="description" content="Read Sakshi Agarwala's articles on AI, Machine Learning, Natural Language Processing, and Reinforcement Learning on Medium." />
+    <meta name="keywords" content="Sakshi Agarwala, AI articles, Machine Learning blog, NLP, Reinforcement Learning" />
+    <meta name="author" content="Sakshi Agarwala" />
+    <title>Blog Articles - Sakshi Agarwala | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <section class="article-cont">
-        <h1 class="title">My Blogs</h1>
-        <!-- Blog Card 1 -->
-        <a href="https://medium.com/@sakshi943494/natural-language-processing-bridging-linguistics-computer-science-and-ai-47f33ab2999d" class="blog-card" target="_blank" rel="noopener noreferrer">
-            <h2 class="article-title">Natural Language Processing: Bridging Linguistics, Computer Science, and AI</h2>
-            <p class="article-subtitle">Natural Language Processing (NLP) is a fascinating subfield...</p>
-            <div class="article-meta">
-                <span class="meta-date">Oct 7, 2024</span>
-                <!-- <span class="meta-info">1K views</span>
-                <span class="meta-comments">14 comments</span> -->
+    <header>
+        <nav id="desktop-nav" aria-label="Main navigation">
+            <div class="logo" aria-label="Sakshi Agarwala">
+                <a href="index.html" aria-label="Go to homepage">Sakshi Agarwala</a>
             </div>
-        </a>
-    
-        <!-- Blog Card 2 -->
-        <a href="https://medium.com/@sakshi943494/understanding-immediate-reinforcement-learning-rl-problems-8c54f76c532f" class="blog-card" target="_blank" rel="noopener noreferrer">
-            <h2 class="article-title">Understanding Immediate Reinforcement Learning (RL) Problems</h2>
-            <p class="article-subtitle">Reinforcement Learning (RL) is a branch of machine learning where...</p>
-            <div class="article-meta">
-                <span class="meta-date">Feb 4, 2025</span>
-                <!-- <span class="meta-info">800 views</span>
-                <span class="meta-comments">10 comments</span> -->
+            <div>
+                <ul class="nav-links" role="list">
+                    <li role="listitem"><a href="index.html#about" aria-label="Navigate to About section">About</a></li>
+                    <li role="listitem"><a href="index.html#Education" aria-label="Navigate to Education section">Education</a></li>
+                    <li role="listitem"><a href="index.html#techstack" aria-label="Navigate to Tech Stack section">Techstack</a></li>
+                    <li role="listitem"><a href="index.html#experience" aria-label="Navigate to Experience section">Experience</a></li>
+                    <li role="listitem"><a href="index.html#projects" aria-label="Navigate to Projects section">Projects</a></li>
+                    <li role="listitem"><a href="index.html#contact" aria-label="Navigate to Contact section">Contact</a></li>
+                </ul>
             </div>
-        </a>
+        </nav>
+        <nav id="hamburger-nav" aria-label="Mobile navigation">
+            <div class="logo" aria-label="Sakshi Agarwala">
+                <a href="index.html" aria-label="Go to homepage">Sakshi Agarwala</a>
+            </div>
+            <div class="hamburger-menu">
+                <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu-links" role="menu">
+                    <li role="menuitem"><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                    <li role="menuitem"><a href="index.html#Education" onclick="toggleMenu()">Education</a></li>
+                    <li role="menuitem"><a href="index.html#techstack" onclick="toggleMenu()">Techstack</a></li>
+                    <li role="menuitem"><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li role="menuitem"><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li role="menuitem"><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="article-cont" aria-labelledby="blogs-title">
+            <h1 class="title" id="blogs-title">My Blogs</h1>
+            <!-- Blog Card 1 -->
+            <article>
+                <a href="https://medium.com/@sakshi943494/natural-language-processing-bridging-linguistics-computer-science-and-ai-47f33ab2999d" class="blog-card" target="_blank" rel="noopener noreferrer">
+                    <h2 class="article-title">Natural Language Processing: Bridging Linguistics, Computer Science, and AI</h2>
+                    <p class="article-subtitle">Natural Language Processing (NLP) is a fascinating subfield...</p>
+                    <div class="article-meta">
+                        <time class="meta-date" datetime="2024-10-07">Oct 7, 2024</time>
+                    </div>
+                </a>
+            </article>
+        
+            <!-- Blog Card 2 -->
+            <article>
+                <a href="https://medium.com/@sakshi943494/understanding-immediate-reinforcement-learning-rl-problems-8c54f76c532f" class="blog-card" target="_blank" rel="noopener noreferrer">
+                    <h2 class="article-title">Understanding Immediate Reinforcement Learning (RL) Problems</h2>
+                    <p class="article-subtitle">Reinforcement Learning (RL) is a branch of machine learning where...</p>
+                    <div class="article-meta">
+                        <time class="meta-date" datetime="2025-02-04">Feb 4, 2025</time>
+                    </div>
+                </a>
+            </article>
 
-        <!-- Blog Card 2 -->
-        <a href="https://medium.com/@sakshi943494/bandit-optimalities-a-guide-to-optimizing-decision-making-in-uncertain-environments-dc8ec2247a9a" class="blog-card" target="_blank" rel="noopener noreferrer">
-            <h2 class="article-title">Bandit Optimalities: A Guide to Optimizing Decision-Making in Uncertain Environments</h2>
-            <p class="article-subtitle">Imagine you are in a casino with multiple slot machines, each...</p>
-            <div class="article-meta">
-                <span class="meta-date">Feb 5, 2025</span>
-                <!-- <span class="meta-info">800 views</span>
-                <span class="meta-comments">10 comments</span> -->
-            </div>
-        </a>
-  
-    </section>
+            <!-- Blog Card 3 -->
+            <article>
+                <a href="https://medium.com/@sakshi943494/bandit-optimalities-a-guide-to-optimizing-decision-making-in-uncertain-environments-dc8ec2247a9a" class="blog-card" target="_blank" rel="noopener noreferrer">
+                    <h2 class="article-title">Bandit Optimalities: A Guide to Optimizing Decision-Making in Uncertain Environments</h2>
+                    <p class="article-subtitle">Imagine you are in a casino with multiple slot machines, each...</p>
+                    <div class="article-meta">
+                        <time class="meta-date" datetime="2025-02-05">Feb 5, 2025</time>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &#169; 2025 Sakshi Agarwala. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
